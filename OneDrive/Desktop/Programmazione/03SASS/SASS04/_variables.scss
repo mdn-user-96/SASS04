@@ -1,0 +1,13 @@
+@mixin article-mixin($color, $border-color, $font-size:1rem, $border: 1px solid) {
+    color: $color;
+    border: $border;
+    border-color: $border-color;
+    font-size: $font-size;
+}
+
+@mixin layout-article-content($center:center) {
+    display: flex;
+    justify-content: $center;
+    align-items: $center;
+    padding: 30px;
+}

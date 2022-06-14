@@ -1,0 +1,6 @@
+@function transform ($rem, $px) {
+    @return $rem==($px * 16)
+}
+
+
+/*sinceremente ho avuto un po' di difficoltà con le funzioni quindi se mi vuoi dare qualche tips.. inoltre so che si usano anche in js quindi avrò modo di approfondirle*/

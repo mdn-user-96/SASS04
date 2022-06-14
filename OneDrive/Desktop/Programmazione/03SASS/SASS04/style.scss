@@ -1,0 +1,40 @@
+@use 'variables';
+@use 'transform';
+section:nth-child(2) {
+    display: flex;
+    article:nth-child(1),
+    article:nth-child(3) {
+        @include variables.article-mixin(blue, green);
+        @include variables.layout-article-content;
+    }
+    article:nth-child(2),
+    article:nth-child(4) {
+        @include variables.article-mixin(red, green);
+        @include variables.layout-article-content;
+    }
+}
+
+section:nth-child(3) {
+    article {
+        @include variables.article-mixin(green, blue, $font-size: 24px);
+        @include variables.layout-article-content;
+    }
+}
+
+div {
+    border: 1px solid;
+    border-color: red;
+    display: flex;
+    gap: 30px;
+    flex-direction: column;
+    padding: 30px;
+}
+
+h1 {
+    color: green;
+    text-decoration: underline;
+    text-decoration-color: blue;
+    text-decoration-thickness: 1px;
+    text-align: center;
+    margin: 0px;
+}
